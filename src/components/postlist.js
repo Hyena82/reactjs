@@ -8,7 +8,7 @@ Postlist.defaultProps = {
     posts: []
 }
 function Postlist(props) {
-    console.log('render..');
+    console.log('postlist render..');
     const { posts } = props
     const renderList = posts.map( post =>{
         return <li key={post.id}>{post.title}</li>

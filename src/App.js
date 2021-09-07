@@ -15,33 +15,36 @@ function App() {
         _page: 1,
         _limit: 5
     });
+    console.log('START',filter);
     useEffect(() => {
+        console.log('useEffect1');
         const fetchPostList = async () => {
             const requestURL = `https://js-post-api.herokuapp.com/api/posts?_page=${filter._page}&_limit${filter._limit}`;
             const response = await fetch(requestURL);
             const responseJSON = await response.json()
             const { data, pagination } = responseJSON
-            setpostList(data)
-            console.log('useEffect');
-            setpaginationAPI(pagination)
+             console.log('updatepost');
+             setpostList(data)
+             console.log('updatepagination');
+             setpaginationAPI(pagination)
+             console.log('useEffect2');
         }
         fetchPostList()
     }, [filter]);
 
     const handlePageChange = (newPage) => {
-        console.log('new page',newPage);
+        console.log('improcess',filter);
         setfilter({
             ...filter,
             _page: newPage
         })
-        console.log('filter',filter);
+        console.log('second',filter);
     }
 
 
 
     return (
         <div className="App">
-
             <header className="App-header">
                 <Postlist posts={postList}></Postlist>
                 <Pagination pagination={paginationAPI}
