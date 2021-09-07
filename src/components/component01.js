@@ -1,6 +1,6 @@
 import { useState } from "react";
-import TodoList from "./todolist";
-import Todoform from "./todoform";
+// import TodoList from "./todolist";
+// import Todoform from "./todoform";
 function Header() {
     const myList = [
         {
@@ -32,12 +32,12 @@ function Header() {
         settodoList(newTodoList)
     }
     return (
-        <div style={{ border: '1px solid red', color: 'red', padding: '20px', height: '600px', width: '1200px' }}>
+        <div style={{ border: '1px solid red', color: 'red', padding: '20px', width: '1200px' }}>
             <h1>
                 Oops!... this too easy right?
                 {/* <ListColor name="this is my prop"></ListColor> */}
-                <Todoform onSubmit={addTodo}></Todoform>
-                <TodoList todos={todoList} onTodoClick={toListClick}></TodoList>
+                {/* <Todoform onSubmit={addTodo}></Todoform>
+                <TodoList todos={todoList} onTodoClick={toListClick}></TodoList> */}
             </h1>
             <span>yayy ^^ Here you stay at Component 01*</span>
 
