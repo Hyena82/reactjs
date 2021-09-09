@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 Pagination.propTypes = {
     pagination: PropTypes.object.isRequired,
     onPageChange: PropTypes.func,
@@ -35,5 +34,4 @@ function Pagination(props) {
         </div>
     );
 }
-
 export default Pagination;
